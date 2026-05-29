@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>w.inii's cloud</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--wc-sand); }
+  body { font-family: var(--wc-font-body); color: var(--wc-ink); -webkit-font-smoothing: antialiased; }
+  #root { min-height: 100vh; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes drift { 0%, 100% { transform: translateX(-2px); } 50% { transform: translateX(2px); } }
+  @keyframes pandaPop {
+    0%   { transform: scale(0.6) rotate(-12deg); opacity: 0; }
+    60%  { transform: scale(1.1) rotate(6deg);  opacity: 1; }
+    100% { transform: scale(1)   rotate(0deg);  opacity: 1; }
+  }
+  .panda-pop { animation: pandaPop 360ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+  /* ───────── status row: mood + note (left) / doodle (right) ───────── */
+  .wc-status-grid {
+    max-width: 1040px;
+    margin: 0 auto 24px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .wc-status-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  /* let cards fill their column rather than the fixed maxWidth we set for the stacked layout */
+  .wc-status-grid .wc-mood-card,
+  .wc-status-grid .wc-note-card,
+  .wc-status-grid .wc-stamps-card,
+  .wc-status-grid .wc-paint-card { max-width: none !important; margin: 0 !important; }
+
+  /* ───────── responsive ───────── */
+  @media (max-width: 640px) {
+    .wc-hide-sm { display: none !important; }
+
+    /* Header: tighten padding, allow wrap, drop wordmark size */
+    .wc-header { padding: 12px 16px !important; gap: 8px !important; }
+    .wc-header nav { gap: 6px !important; }
+
+    /* Hero: smaller display type so it fits a phone */
+    .wc-hero { padding: 40px 20px 20px !important; }
+    .wc-hero h1 { font-size: 56px !important; line-height: 0.98 !important; }
+    .wc-hero .wc-hero-panda { display: none !important; }
+
+    /* Mood card: stack vertically, dial the phrase down so it doesn't collide with the panda or the CTA */
+    .wc-mood-card {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 10px !important;
+      padding: 14px 16px !important;
+      margin: 0 16px 8px !important;
+    }
+    .wc-mood-card .wc-mood-panda { width: 56px !important; height: 56px !important; }
+    .wc-mood-card .wc-mood-phrase { font-size: 22px !important; line-height: 1.1 !important; }
+    .wc-mood-card .wc-mood-cta { align-self: stretch; }
+    .wc-mood-card .wc-mood-cta button { width: 100%; justify-content: center; }
+
+    /* Note + paint + stamps card: keep tight margins on phone */
+    .wc-note-card, .wc-paint-card, .wc-stamps-card { margin-left: 16px !important; margin-right: 16px !important; }
+
+    /* Status grid stacks on phone */
+    .wc-status-grid { grid-template-columns: 1fr !important; padding: 0 16px !important; gap: 12px !important; }
+    .wc-status-grid .wc-mood-card,
+    .wc-status-grid .wc-note-card,
+    .wc-status-grid .wc-stamps-card,
+    .wc-status-grid .wc-paint-card { margin: 0 !important; }
+  }
+
+  @media (max-width: 380px) {
+    .wc-hero h1 { font-size: 44px !important; }
+    .wc-mood-card .wc-mood-phrase { font-size: 22px !important; }
+  }
+</style>
+</head>
+<body style="font-family: Quicksand">
+<div id="root"></div>
+
+<script src="src/panda-urls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="src/supabase-client.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="src/tweaks-panel.jsx"></script>
+<script type="text/babel" src="src/components.jsx"></script>
+<script type="text/babel" src="src/sticker-library.jsx"></script>
+<script type="text/babel" src="src/screens.jsx"></script>
+<script type="text/babel" src="src/paint-board.jsx"></script>
+<script type="text/babel" src="src/stamps.jsx"></script>
+<script type="text/babel" src="src/app.jsx"></script>
+</body>
+</html>

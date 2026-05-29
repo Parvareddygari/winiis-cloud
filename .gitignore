@@ -1,0 +1,21 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (none needed — no build step — but ignore if you add tooling)
+node_modules/
+
+# Netlify
+.netlify/
+
+# Local env
+.env
+.env.local

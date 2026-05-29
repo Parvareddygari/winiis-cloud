@@ -1,0 +1,12 @@
+# Netlify — static site, no build step.
+# Publishes the repo root as-is.
+
+[build]
+  publish = "."
+  command = ""
+
+# SPA-style fallback so any path serves the app.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

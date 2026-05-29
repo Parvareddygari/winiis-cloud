@@ -1,0 +1,179 @@
+/* =========================================================================
+   w.inii's cloud — colors_and_type.css
+   Beachy, cute, elegant. Sun-washed sand, soft sea, coral sunsets, pandas.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Special+Elite&display=swap');
+
+:root {
+  /* -------------------------------------------------------------------------
+     BASE — Colors (beach)
+     ------------------------------------------------------------------------- */
+  --wc-sand:           #FAF3E7;   /* sun-washed sand — the page */
+  --wc-sand-2:         #F3EADA;   /* deeper sand */
+  --wc-foam:           #EAF3EE;   /* soft sea foam — alt sections */
+  --wc-shell:          #FEFBF5;   /* shell white — cards, polaroids */
+  --wc-shell-2:        #FFFFFF;   /* pure white — modals on tinted bg */
+
+  --wc-sky:            #C9E2EC;   /* pale sky blue */
+  --wc-sky-deep:       #8FB8C7;
+  --wc-sea:            #5B9AA0;   /* sea green-blue — primary accent */
+  --wc-sea-deep:       #3D7479;   /* hover */
+  --wc-sea-press:      #2E5C61;
+
+  --wc-coral:          #F08A6C;   /* sunset coral — secondary accent, hearts */
+  --wc-coral-soft:     #FAD0BE;
+  --wc-coral-tint:     #FCE4D8;
+
+  --wc-sun:            #F5C76E;   /* sunshine yellow — date stamps, highlights */
+  --wc-sun-soft:       #FCE6B6;
+
+  --wc-ink:            #2E3D44;   /* deep ocean — primary text */
+  --wc-ink-soft:       #5E7079;   /* secondary text */
+  --wc-ink-mute:       #9CAEB5;   /* metadata, placeholders */
+  --wc-ink-faint:      #C4D2D7;
+
+  --wc-edge:           #DCE6E8;   /* hairline borders, dividers */
+  --wc-edge-strong:    #BFD0D4;
+
+  --wc-tape:           rgba(245, 199, 110, 0.55);  /* yellow tape */
+  --wc-tape-coral:     rgba(240, 138, 108, 0.40);  /* coral tape */
+
+  --wc-success:        #74A87A;   /* soft sea green */
+  --wc-danger:         #D86A4E;   /* coral-red */
+  --wc-warning:        #E8B547;
+
+  /* panda monochrome (for stickers) */
+  --wc-panda-ink:      #1F2429;
+  --wc-panda-blush:    #FAD0BE;
+
+  /* -------------------------------------------------------------------------
+     BASE — Type
+     ------------------------------------------------------------------------- */
+  --wc-font-hand:      "Caveat", "Patrick Hand", "Bradley Hand", cursive;
+  --wc-font-body:      "Quicksand", "Avenir Next", system-ui, sans-serif;
+  --wc-font-stamp:     "Special Elite", "Courier Prime", "Courier New", monospace;
+
+  --wc-fs-12: 12px;
+  --wc-fs-14: 14px;
+  --wc-fs-15: 15px;
+  --wc-fs-16: 16px;
+  --wc-fs-18: 18px;
+  --wc-fs-20: 20px;
+  --wc-fs-24: 24px;
+  --wc-fs-28: 28px;
+  --wc-fs-36: 36px;
+  --wc-fs-48: 48px;
+  --wc-fs-64: 64px;
+  --wc-fs-88: 88px;
+
+  --wc-lh-tight:  1.05;
+  --wc-lh-snug:   1.2;
+  --wc-lh-normal: 1.5;
+  --wc-lh-relaxed: 1.65;
+
+  --wc-tracking-tight: -0.01em;
+  --wc-tracking-wide:  0.06em;
+  --wc-tracking-stamp: 0.06em;
+
+  /* -------------------------------------------------------------------------
+     BASE — Spacing (4px base)
+     ------------------------------------------------------------------------- */
+  --wc-space-1:  4px;
+  --wc-space-2:  8px;
+  --wc-space-3:  12px;
+  --wc-space-4:  16px;
+  --wc-space-5:  24px;
+  --wc-space-6:  32px;
+  --wc-space-7:  48px;
+  --wc-space-8:  64px;
+  --wc-space-9:  96px;
+
+  /* -------------------------------------------------------------------------
+     BASE — Radii (cuter than industrial — softer, rounder)
+     ------------------------------------------------------------------------- */
+  --wc-radius-photo:   4px;     /* polaroid corners — gently rounded */
+  --wc-radius-control: 999px;   /* buttons are pills, very cute */
+  --wc-radius-input:   12px;    /* inputs */
+  --wc-radius-surface: 20px;    /* cards, modals — soft pillow */
+  --wc-radius-pill:    999px;
+
+  /* -------------------------------------------------------------------------
+     BASE — Shadows (warm sun shadows, never blue)
+     ------------------------------------------------------------------------- */
+  --wc-shadow-sm:    0 1px 2px rgba(46, 61, 68, 0.06);
+  --wc-shadow-md:    0 4px 14px rgba(46, 61, 68, 0.08), 0 2px 4px rgba(46, 61, 68, 0.05);
+  --wc-shadow-lg:    0 18px 40px rgba(46, 61, 68, 0.14), 0 6px 12px rgba(46, 61, 68, 0.08);
+  --wc-shadow-xl:    0 32px 64px rgba(46, 61, 68, 0.18), 0 12px 24px rgba(46, 61, 68, 0.10);
+  --wc-shadow-focus: 0 0 0 4px rgba(91, 154, 160, 0.25);
+  --wc-shadow-sun:   0 4px 18px rgba(245, 199, 110, 0.35);  /* warm glow for highlighted */
+
+  /* -------------------------------------------------------------------------
+     BASE — Motion
+     ------------------------------------------------------------------------- */
+  --wc-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --wc-ease-pickup:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --wc-ease-tide:     cubic-bezier(0.45, 0, 0.55, 1);
+  --wc-dur-tap:    120ms;
+  --wc-dur-hover:  220ms;
+  --wc-dur-modal:  400ms;
+  --wc-dur-page:   600ms;
+
+  /* -------------------------------------------------------------------------
+     SEMANTIC — Type roles
+     ------------------------------------------------------------------------- */
+  --wc-text-wordmark: 600 var(--wc-fs-64)/0.95 var(--wc-font-hand);
+  --wc-text-display:  600 var(--wc-fs-88)/0.95 var(--wc-font-hand);
+  --wc-text-h1:       600 var(--wc-fs-64)/0.95 var(--wc-font-hand);
+  --wc-text-h2:       600 var(--wc-fs-48)/1.0 var(--wc-font-hand);
+  --wc-text-h3:       600 var(--wc-fs-20)/1.25 var(--wc-font-body);
+  --wc-text-h4:       600 var(--wc-fs-16)/1.25 var(--wc-font-body);
+  --wc-text-body:     400 var(--wc-fs-16)/1.55 var(--wc-font-body);
+  --wc-text-body-md:  500 var(--wc-fs-15)/1.4 var(--wc-font-body);
+  --wc-text-body-sm:  400 var(--wc-fs-14)/1.45 var(--wc-font-body);
+  --wc-text-caption:  500 var(--wc-fs-24)/1.1 var(--wc-font-hand);
+  --wc-text-meta:     500 var(--wc-fs-12)/1.4 var(--wc-font-body);
+  --wc-text-stamp:    400 var(--wc-fs-12)/1 var(--wc-font-stamp);
+  --wc-text-stamp-lg: 400 var(--wc-fs-14)/1 var(--wc-font-stamp);
+  --wc-text-button:   600 var(--wc-fs-15)/1 var(--wc-font-body);
+}
+
+/* =========================================================================
+   SEMANTIC ELEMENT STYLES — opt in by wrapping content in .wc
+   ========================================================================= */
+
+.wc, .wc * { box-sizing: border-box; }
+
+.wc {
+  background: var(--wc-sand);
+  color: var(--wc-ink);
+  font: var(--wc-text-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wc h1 { font: var(--wc-text-h1); letter-spacing: var(--wc-tracking-tight); margin: 0 0 var(--wc-space-4); color: var(--wc-ink); }
+.wc h2 { font: var(--wc-text-h2); margin: 0 0 var(--wc-space-4); color: var(--wc-ink); }
+.wc h3 { font: var(--wc-text-h3); margin: 0 0 var(--wc-space-3); }
+.wc h4 { font: var(--wc-text-h4); margin: 0 0 var(--wc-space-2); }
+.wc p  { font: var(--wc-text-body); color: var(--wc-ink-soft); margin: 0 0 var(--wc-space-4); text-wrap: pretty; max-width: 64ch; }
+.wc small, .wc .wc-meta { font: var(--wc-text-meta); color: var(--wc-ink-mute); }
+
+.wc .wc-caption  { font: var(--wc-text-caption); color: var(--wc-ink); }
+.wc .wc-stamp    { font: var(--wc-text-stamp); color: var(--wc-ink-mute); letter-spacing: var(--wc-tracking-stamp); text-transform: uppercase; }
+.wc .wc-wordmark { font: var(--wc-text-wordmark); color: var(--wc-ink); }
+
+.wc a { color: var(--wc-sea); text-decoration: none; border-bottom: 1.5px solid currentColor; transition: opacity var(--wc-dur-hover) var(--wc-ease-standard); }
+.wc a:hover { opacity: 0.75; }
+
+.wc code, .wc pre { font-family: var(--wc-font-stamp); font-size: 0.92em; background: var(--wc-sun-soft); padding: 2px 6px; border-radius: 4px; color: var(--wc-ink); }
+
+/* Sand-grain overlay — subtle paper texture */
+.wc-grain::before {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.18  0 0 0 0 0.15  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
